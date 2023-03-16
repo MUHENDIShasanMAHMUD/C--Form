@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace _4genn
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int kisa = Convert.ToInt32(txtKisa.Text); ///txtKisa adlı TextBox nesnesindeki veriyi tamsayıya dönüştürür ve kisa adlı değişkene atar
+            int uzun = Convert.ToInt32(txtUzun.Text); //txtUzun adlı TextBox nesnesindeki veriyi tamsayıya dönüştürür ve uzun adlı değişkene atar.
+            int Alan = uzun * kisa; //Alan adlı değişkeni hesaplamak için uzunluğu ve genişliği çarpar.
+            label3.Text = "Alan :" + Convert.ToString(Alan); //Alan değerini içeren bir dize oluşturur ve label3 nesnesinin metin özelliğine atar.
+        }
+    }
+}
